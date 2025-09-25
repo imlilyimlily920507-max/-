@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>徐筱雯 (Hsiao-Wen Hsu) - 互動式履歷</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Calm Slate & Beige -->
+    <!-- Application Structure Plan: 本應用程式採用更簡潔的儀表板式資訊架構。移除複雜圖表，改以清晰的文字與卡片呈現，藉由增加間距優化排版。結構分為個人簡介、核心技能、專案經歷與關於我。這樣的線性但區塊化的設計，能讓招募者更專注於文字內容，同時維持良好的視覺導引與探索性。 -->
+    <!-- Visualization & Content Choices: 核心技能 -> 目標: 快速告知技能廣度 -> 呈現: 清晰列表與徽章 -> 互動: 提供簡潔的分類與視覺提示 -> 理由: 移除複雜圖表以避免視覺混亂，改用條列式更能精確呈現技術。專案經歷 -> 目標: 展示實作成果 -> 呈現: 互動式卡片 -> 互動: 點擊卡片展開詳細說明 -> 理由: 保持主畫面的簡潔，同時提供深入探索的選項。 -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #FDFBF7;
+            color: #334155;
+        }
+        .nav-link.active {
+            color: #1E40AF;
+            border-bottom-color: #1E40AF;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header id="header" class="p-6 md:p-8 sticky top-0 z-50 bg-white/80 backdrop-blur-sm shadow-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-xl md:text-2xl font-bold text-slate-800">徐筱雯 (Hsiao-Wen Hsu)</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#skills" class="nav-link text-slate-600 hover:text-blue-800 font-medium pb-1 border-b-2 border-transparent transition-all">核心技能</a>
+                <a href="#projects" class="nav-link text-slate-600 hover:text-blue-800 font-medium pb-1 border-b-2 border-transparent transition-all">專案研究</a>
+                <a href="#about" class="nav-link text-slate-600 hover:text-blue-800 font-medium pb-1 border-b-2 border-transparent transition-all">關於我</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-6 md:p-12">
+
+        <section id="hero" class="text-center py-12 md:py-20">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-800 mb-4">AI 語音辨識與行動開發的實踐者</h2>
+                <p class="text-lg md:text-xl text-slate-600 mb-8">具備 Python 資料分析、AI 模型訓練、Flutter 開發與資安系統管理能力。熱衷於將學術研究應用於解決實際問題，並在團隊協作中發揮積極影響力。</p>
+                <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 text-slate-500">
+                    <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" /></svg><span class="text-base">0968-837-130</span></div>
+                    <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" /><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" /></svg><span class="text-base">lilian920507@gmail.com</span></div>
+                    <div class="flex items-center space-x-2"><svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd" /></svg><span class="text-base">高雄市鳳山區</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="py-12 md:py-20">
+            <h3 class="text-3xl font-bold text-center mb-6 text-slate-800">核心技能</h3>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">以下是我在不同技術領域的技能總覽，每個領域都輔以具體技術，清晰地展現我的專業能力。</p>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h4 class="font-bold text-xl mb-3 text-blue-800">後端 (Backend)</h4>
+                    <p class="text-slate-600">Python, Flask, MongoDB, API 串接及撰寫</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h4 class="font-bold text-xl mb-3 text-green-800">前端 (Frontend)</h4>
+                    <p class="text-slate-600">Flutter, HTML, CSS, JavaScript</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h4 class="font-bold text-xl mb-3 text-purple-800">AI / ML</h4>
+                    <p class="text-slate-600">Wav2Vec2, Pytorch, TensorFlow, DeepFake 語音偵測</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md border border-slate-200">
+                    <h4 class="font-bold text-xl mb-3 text-red-800">資訊與系統</h4>
+                    <p class="text-slate-600">ISO 規範, Linux 指令, 資安事件處理</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-12 md:py-20 bg-slate-50 rounded-xl">
+            <h3 class="text-3xl font-bold text-center mb-6 text-slate-800">專案與研究亮點</h3>
+            <p class="text-center text-slate-600 mb-12 max-w-2xl mx-auto">這裡展示了我參與的重點專案與研究成果。每個專案都代表一次從概念到實踐的完整過程，點擊卡片可以展開了解更多細節。</p>
+            <div id="project-list" class="space-y-8 max-w-4xl mx-auto">
+            </div>
+        </section>
+
+        <section id="about" class="py-12 md:py-20 bg-white rounded-xl shadow-lg p-8 md:p-12">
+             <h3 class="text-3xl font-bold text-center mb-12 text-slate-800">關於我</h3>
+             <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-700">個人特質與自評</h4>
+                    <ul class="space-y-4 text-slate-600">
+                        <li class="flex items-start">
+                            <span class="mr-3 text-blue-600 font-bold">●</span>
+                            <div>
+                                <h5 class="font-semibold">主動自學與快速上手</h5>
+                                <p>在資源有限環境下主動參與競賽、投稿與專題，建立扎實實作能力。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-blue-600 font-bold">●</span>
+                            <div>
+                                <h5 class="font-semibold">熱衷學術與實地實作</h5>
+                                <p>曾從事資訊應用(詐騙防治)出發，完成 App 原型與成效驗證。</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="mr-3 text-blue-600 font-bold">●</span>
+                            <div>
+                                <h5 class="font-semibold">團隊協作與溝通</h5>
+                                <p>主持活動與多次簡報發表，具備跨組溝通與推導專案的能力。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xl font-bold mb-4 text-slate-700">學歷與語言</h4>
+                     <div class="mb-6 bg-slate-50 p-6 rounded-lg">
+                        <h5 class="font-semibold text-slate-800">中央警察大學 資訊管理學系 學士</h5>
+                        <p class="text-sm text-slate-500 mt-1">2021/09 - 2025/06</p>
+                    </div>
+                    <div>
+                        <h5 class="font-semibold text-slate-800">語言能力</h5>
+                        <div class="mt-3">
+                            <p class="flex justify-between items-center font-medium"><span>英文</span><span>B2 中高級</span></p>
+                            <div class="w-full bg-slate-200 rounded-full h-2.5 mt-2">
+                                <div class="bg-blue-600 h-2.5 rounded-full" style="width: 80%"></div>
+                            </div>
+                            <p class="text-xs text-slate-500 mt-1">Merise 英文能力分級測驗</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white py-8 mt-16">
+        <div class="container mx-auto text-center text-slate-400">
+            <p>&copy; 2024 Hsiao-Wen Hsu. Designed as an interactive resume.</p>
+        </div>
+    </footer>
+
+<script>
+    const projectsData = [
+        {
+            title: "提案-AI 輔助防詐守護 APP",
+            period: "2024/11 - 2024/12",
+            context: "資訊人社會團體獎學金",
+            summary: "偵測 DeepFake 媒介語音，提供即時風險提示。",
+            details: [
+                "<strong>成果：</strong> 帶領團隊獲得 <strong>冠軍</strong>，過程中強化了協作、公開表達與提案簡報的能力。",
+                "<strong>角色：</strong> 團隊領導者、主要提案人。"
+            ],
+            tags: ["AI/ML", "資安", "領導力"],
+            highlight: "🏆 冠軍"
+        },
+        {
+            title: "真偽語音辨識研究",
+            period: "2024/05 - 2024/11",
+            context: "學術研究",
+            summary: "使用 Wav2Vec2 模型，設計四階段訓練策略以適應不同目標。",
+            details: [
+                "<strong>成效：</strong> 在三組獨立測試資料集上，皆達到 <strong>90% 以上</strong> 的準確率。",
+                "<strong>論文：</strong> 研究成果獲選發表於「中華民國資訊管理學會年會暨論文研討會」。"
+            ],
+            tags: ["Wav2Vec2", "Pytorch", "AI/ML"],
+            highlight: "📜 論文入選"
+        },
+        {
+            title: "校內 APP 設計比賽",
+            period: "2024/10 - 2024/12",
+            context: "校內競賽",
+            summary: "負責從需求定義、程式開發到最終簡報的全流程。",
+            details: [
+                "<strong>技術：</strong> 使用 <strong>Flutter</strong> 進行跨平台開發，整合深度學習模型，並透過 API 進行串接與資料分析。",
+                "<strong>成果：</strong> 獲得 <strong>冠軍</strong>。"
+            ],
+            tags: ["Flutter", "API", "深度學習"],
+            highlight: "🏆 冠軍"
+        }
+    ];
+
+    const timelineData = [
+         {
+            year: "2024",
+            title: "競賽與研究成果豐碩",
+            description: "在 AI 防詐提案、語音辨識研究及 App 設計比賽中均獲得冠軍或論文入選肯定。",
+            side: 'right'
+        },
+        {
+            year: "2023",
+            title: "主持校園活動 & 參與國際交流",
+            description: "擔任社團招募活動總召，負責流程規劃與跨部門協調。並參與休士頓遊學團，拓展國際視野。",
+            side: 'left'
+        },
+        {
+            year: "2021",
+            title: "進入大學",
+            description: "開始在中央警察大學資訊管理學系就讀，奠定資訊科技與管理的基礎。",
+            side: 'right'
+        }
+    ];
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const projectList = document.getElementById('project-list');
+        projectsData.forEach(p => {
+            const projectEl = document.createElement('div');
+            projectEl.className = 'bg-white p-8 rounded-lg shadow-md border border-slate-200 cursor-pointer transition-all hover:shadow-xl hover:border-blue-300';
+
+            let tagsHtml = p.tags.map(tag => `<span class="bg-slate-200 text-slate-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">${tag}</span>`).join('');
+
+            projectEl.innerHTML = `
+                <div class="flex justify-between items-start">
+                    <div>
+                        <h4 class="text-xl font-bold text-slate-800">${p.title}</h4>
+                        <p class="text-sm text-slate-500 mt-1">${p.context} | ${p.period}</p>
+                    </div>
+                    ${p.highlight ? `<div class="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full whitespace-nowrap">${p.highlight}</div>` : ''}
+                </div>
+                <p class="mt-4 text-slate-600">${p.summary}</p>
+                <div class="details hidden mt-4 pt-4 border-t border-slate-200">
+                    <ul class="space-y-2 list-disc list-inside text-slate-600">
+                        ${p.details.map(d => `<li>${d}</li>`).join('')}
+                    </ul>
+                    <div class="mt-4">${tagsHtml}</div>
+                </div>
+            `;
+
+            projectEl.addEventListener('click', () => {
+                projectEl.querySelector('.details').classList.toggle('hidden');
+            });
+
+            projectList.appendChild(projectEl);
+        });
+
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(link => {
+                        link.classList.toggle('active', link.getAttribute('href').substring(1) === entry.target.id);
+                    });
+                }
+            });
+        }, { rootMargin: "-50% 0px -50% 0px" });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+    });
+</script>
+
+</body>
+</html>
